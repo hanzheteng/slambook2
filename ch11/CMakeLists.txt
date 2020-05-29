@@ -5,8 +5,11 @@ set( CMAKE_BUILD_TYPE "Release" )
 set( CMAKE_CXX_FLAGS "-std=c++11 -O3" )
 
 # opencv 
-find_package( OpenCV 3.1 REQUIRED )
+find_package( OpenCV 4 REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
+message(STATUS "OpenCV_VERSION = ${OpenCV_VERSION}")
+message(STATUS "OpenCV_LIBS = ${OpenCV_LIBS}")
+message(STATUS "OpenCV_INCLUDE_DIRS = ${OpenCV_INCLUDE_DIRS}")
 
 # dbow3 
 # dbow3 is a simple lib so I assume you installed it in default directory 
